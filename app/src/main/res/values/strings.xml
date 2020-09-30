@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LocationPinpointer</string>
+    <string name="ask_permission">This app requires your location permission to acces device location. Please allow the permission.</string>
+    <string name="Permission_denied_text">Location Service has permanently been denied. Go to the Settings and enable it.</string>
+    <string name="title_activity_map_location">MapLocation</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
