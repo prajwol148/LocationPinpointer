@@ -16,7 +16,7 @@
     android:gravity="center_horizontal"
     android:background="@color/colorPrimaryDark"
     android:textColor="#ffffff"/>
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -28,12 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2.3">
+        android:layout_weight="2">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="  Your Location Details  "
+                android:elevation="2dp"
                 android:background="@drawable/rounded_corner"
                 android:layout_marginTop="4dp"
                 android:textColor="#ffffff"
@@ -110,6 +111,14 @@
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/latitude"
                         android:text=" Latitude: " />
+                    <TextView
+                        android:id="@+id/postal"
+                        style="@style/LocationDetailsAttributes"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/postal"
+                        android:text=" Postal: " />
 
                 </LinearLayout>
             </LinearLayout>

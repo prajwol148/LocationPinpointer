@@ -57,6 +57,7 @@ public class MapLocation extends AppCompatActivity implements OnMapReadyCallback
     private TextView country;
     private TextView address;
     private TextView city;
+    private TextView postal;
 
 
     private final float DEFAULT_ZOOM = 18;
@@ -71,6 +72,7 @@ public class MapLocation extends AppCompatActivity implements OnMapReadyCallback
         city = findViewById(R.id.city);
         address = findViewById(R.id.address);
         latitude = findViewById(R.id.latitude);
+        postal=findViewById(R.id.postal);
 
         //This is used to load the map fragment I setup in content_map_location (map window).
         SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -171,11 +173,12 @@ public class MapLocation extends AppCompatActivity implements OnMapReadyCallback
                                     .getLatitude(),location.getLongitude(),1);
 
 
-                            longitude.setText(Html.fromHtml("<b> Longitude: </b><br>"+addresses.get(0).getLongitude()));
-                            latitude.setText(Html.fromHtml(" Latitude: <br>"+addresses.get(0).getLatitude()));
-                            country.setText(Html.fromHtml(" Country: <br>"+addresses.get(0).getCountryName()));
-                            address.setText(Html.fromHtml(" Address: <br>"+addresses.get(0).getAddressLine(0)));
-                            city.setText(Html.fromHtml(" City: <br>"+addresses.get(0).getLocality()));
+                            longitude.setText(Html.fromHtml(" <font color='#006a4e'><b>Longitude: </b><br></font>"+addresses.get(0).getLongitude()));
+                            latitude.setText(Html.fromHtml(" <font color='#006a4e'><b>Latitude: : </b><br></font>"+addresses.get(0).getLatitude()));
+                            country.setText(Html.fromHtml(" <font color='#006a4e'><b>Country: : </b><br></font>"+addresses.get(0).getCountryName()));
+                            address.setText(Html.fromHtml(" <font color='#006a4e'><b>Address: : </b><br></font>"+addresses.get(0).getAddressLine(0)));
+                            city.setText(Html.fromHtml(" <font color='#006a4e'><b>City: </b><br></font>"+addresses.get(0).getLocality()));
+                            postal.setText(Html.fromHtml(" <font color='#006a4e'><b>Postal Code: </b><br></font>"+addresses.get(0).getPostalCode()));
 
 
                         } catch (IOException e) {
